@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Blog || Donate Bangladesh</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -29,7 +29,7 @@
                 <div class="md:container">
                     <div class="navbar bg-base-100 bg-button-color">
                         <div class="navbar-start">
-                            <button
+                            <button id="home-button"
                                 class="btn btn-success ml-8 mt-2">Home</button>
                         </div>
                         <div class="navbar-center hidden lg:flex">
@@ -51,41 +51,72 @@
                         class="collapse collapse-arrow join-item border-base-300 border">
                         <input type="radio" name="my-accordion-4"
                             checked="checked" />
-                        <div class="collapse-title text-xl font-medium">Click to
-                            open this one and close others</div>
+                        <div class="collapse-title text-xl font-medium">What is
+                            the Document Object Model (DOM)? </div>
                         <div class="collapse-content">
-                            <p>hello</p>
+                            <p>The Document Object Model (DOM) is a programming
+                                interface for web documents. It represents the
+                                page so that programs can change the document
+                                structure, style, and content. The DOM
+                                represents the document as nodes and objects;
+                                that way, programming languages can interact
+                                with the page.</p>
                         </div>
                     </div>
                     <div
                         class="collapse collapse-arrow join-item border-base-300 border">
                         <input type="radio" name="my-accordion-4" />
-                        <div class="collapse-title text-xl font-medium">Click to
-                            open this one and close others</div>
+                        <div class="collapse-title text-xl font-medium">How do
+                            you select an element from the DOM?</div>
                         <div class="collapse-content">
-                            <p>hello</p>
+                            <p>The getElementById() method of the Document
+                                interface returns an Element object representing
+                                the element whose id property matches the
+                                specified string and Using
+                                getElementsByClassName:
+                                ..., Using getElementsByTagName: ..., Using
+                                querySelector: ..., Using querySelectorAll: ...
+                                etc.</p>
                         </div>
                     </div>
                     <div
                         class="collapse collapse-arrow join-item border-base-300 border">
                         <input type="radio" name="my-accordion-4" />
-                        <div class="collapse-title text-xl font-medium">Click to
-                            open this one and close others</div>
+                        <div class="collapse-title text-xl font-medium">What is
+                            event delegation in the context of the DOM, and why
+                            it is useful?</div>
                         <div class="collapse-content">
-                            <p>hello</p>
+                            <p>Event delegation refers to the process of using
+                                event propagation (bubbling) to handle events at
+                                a higher level in the DOM than the element on
+                                which the event originated. It allows us to
+                                attach a single event listener for elements that
+                                exist now or in the future.</p>
                         </div>
                     </div>
                     <div
                         class="collapse collapse-arrow join-item border-base-300 border">
                         <input type="radio" name="my-accordion-4" />
-                        <div class="collapse-title text-xl font-medium">Click to
-                            open this one and close others</div>
+                        <div class="collapse-title text-xl font-medium">How do
+                            you manipulate an elements attributes and style
+                            using the DOM?</div>
                         <div class="collapse-content">
-                            <p>hello</p>
+                            <p>Changing an element's style (CSS) attributes is
+                                one of the ways in which the DOM can be used.
+                                For example, in the code below, the onfocus
+                                event handler method is used to change the
+                                input element's style when the user clicks
+                                inside it. When this event occurs, the element's
+                                background color will change to purple.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+        <script>
+            document.getElementById('home-button').addEventListener('click', function() {
+              window.location.href = 'index.html';
+            });
+          </script>
     </body>
 </html>
