@@ -15,12 +15,17 @@ document.getElementById("donate-button").addEventListener("click", function () {
   const evenAmount = totalAmount - inputBalance;
   document.getElementById("total-amount").innerText = evenAmount;
 
+  if(inputBalance <= 0 || isNaN(inputBalance)){
+    alert("Please enter a valid donation amount.");
+    return;
+}
+
     // history section 
     const historyItem = document.createElement("div");
   historyItem.className =
-    "bg-white p-6 rounded-md w-8/12 h-24 border border-gray-500 mx-auto";
+    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
     historyItem.innerHTML = `
-    <p class="text-xl text-black font-bold">${inputBalance} Taka Donate for Flood at Noakhali, Bangladesh</p>
+    <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood at Noakhali, Bangladesh</p>
     <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
     `;
     const historyContainer = document.getElementById('history-section');
@@ -44,12 +49,17 @@ document
     const evenAmount = totalAmount - inputBalance;
     document.getElementById("total-amount").innerText = evenAmount;
 
+    if(inputBalance <= 0 || isNaN(inputBalance)){
+      alert("Please enter a valid donation amount.");
+      return;
+  }
+
     // history section
     const historyItem = document.createElement("div");
   historyItem.className =
-    "bg-white p-6 rounded-md w-8/12 h-24 border border-gray-500 mx-auto";
+    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
     historyItem.innerHTML = `
-    <p class="text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Feni,Bangladesh</p>
+    <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Feni,Bangladesh</p>
     <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
     `;
     const historyContainer = document.getElementById('history-section');
@@ -72,12 +82,17 @@ document
     const evenAmount = totalAmount - inputBalance;
     document.getElementById("total-amount").innerText = evenAmount;
 
+    if(inputBalance <= 0 || isNaN(inputBalance)){
+      alert("Please enter a valid donation amount.");
+      return;
+  }
+
     // history section
     const historyItem = document.createElement("div");
   historyItem.className =
-    "bg-white p-6 rounded-md w-8/12 h-24 border border-gray-500 mx-auto";
+    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
     historyItem.innerHTML = `
-    <p class="text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Thakurgoan,Bangladesh</p>
+    <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Thakurgoan,Bangladesh</p>
     <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
     `;
     const historyContainer = document.getElementById('history-section');
