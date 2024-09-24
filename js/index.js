@@ -1,17 +1,30 @@
 document.getElementById("blog-button").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
+// create function
+function historySection(inputBalance){
+  const value = document.getElementById('h1-text').innerText;
+  const historyItem = document.createElement("div");
+    historyItem.className =
+      "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
+    historyItem.innerHTML = `
+    <p class="lg:text-xl text-black font-bold">${inputBalance} Taka ${value}</p>
+    <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
+    `;
+    const historyContainer = document.getElementById("history-section");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+}
 
 document.getElementById("donate-button").addEventListener("click", function () {
   const inputBalance = parseFloat(
     document.getElementById("input-balance").value
   );
-  if(inputBalance <= 0 || isNaN(inputBalance)){
+  if (inputBalance <= 0 || isNaN(inputBalance)) {
     alert("Please enter a valid donation amount.");
-    return;
-}
-const modal = document.getElementById('my_modal_1');
-      modal.showModal();
+   return;
+  };
+  const modal = document.getElementById("my_modal_1");
+  modal.showModal();
 
   const pBalance = parseFloat(document.getElementById("p-balance").innerText);
   const addMoney = inputBalance + pBalance;
@@ -22,17 +35,8 @@ const modal = document.getElementById('my_modal_1');
   const evenAmount = totalAmount - inputBalance;
   document.getElementById("total-amount").innerText = evenAmount;
 
-    // history section 
-    const historyItem = document.createElement("div");
-  historyItem.className =
-    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
-    historyItem.innerHTML = `
-    <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood at Noakhali, Bangladesh</p>
-    <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
-    `;
-    const historyContainer = document.getElementById('history-section');
-    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-
+  // history section
+  historySection(inputBalance);
 });
 document
   .getElementById("donate-button2")
@@ -40,13 +44,13 @@ document
     const inputBalance = parseFloat(
       document.getElementById("input-balance2").value
     );
-    if(inputBalance <= 0 || isNaN(inputBalance)){
+    if (inputBalance <= 0 || isNaN(inputBalance)) {
       alert("Please enter a valid donation amount.");
       return;
-  }
+    }
 
-  const modal = document.getElementById('my_modal_1');
-      modal.showModal();
+    const modal = document.getElementById("my_modal_1");
+    modal.showModal();
 
     const pBalance = parseFloat(
       document.getElementById("p-balance2").innerText
@@ -61,13 +65,13 @@ document
 
     // history section
     const historyItem = document.createElement("div");
-  historyItem.className =
-    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
+    historyItem.className =
+      "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
     historyItem.innerHTML = `
     <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Feni,Bangladesh</p>
     <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
     `;
-    const historyContainer = document.getElementById('history-section');
+    const historyContainer = document.getElementById("history-section");
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
   });
 document
@@ -76,13 +80,13 @@ document
     const inputBalance = parseFloat(
       document.getElementById("input-balance3").value
     );
-    if(inputBalance <= 0 || isNaN(inputBalance)){
+    if (inputBalance <= 0 || isNaN(inputBalance)) {
       alert("Please enter a valid donation amount.");
       return;
-  }
+    }
 
-  const modal = document.getElementById('my_modal_1');
-      modal.showModal();
+    const modal = document.getElementById("my_modal_1");
+    modal.showModal();
 
     const pBalance = parseFloat(
       document.getElementById("p-balance3").innerText
@@ -97,13 +101,13 @@ document
 
     // history section
     const historyItem = document.createElement("div");
-  historyItem.className =
-    "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
+    historyItem.className =
+      "bg-white lg:p-6 p-2 rounded-md w-8/12 lg:h-24 h-26 border border-gray-500 mx-auto";
     historyItem.innerHTML = `
     <p class="lg:text-xl text-black font-bold">${inputBalance} Taka Donate for Flood Relief in Thakurgoan,Bangladesh</p>
     <p class="text-xs text-gray-500 mt-2">Date: ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
     `;
-    const historyContainer = document.getElementById('history-section');
+    const historyContainer = document.getElementById("history-section");
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
   });
 document
@@ -112,15 +116,14 @@ document
     const defaultButton = document.getElementById("default-button");
     const donationButton = document.getElementById("donation-button");
     donationButton.classList.add("btn-inactive");
-    donationButton.classList.remove("btn-success"); 
+    donationButton.classList.remove("btn-success");
     defaultButton.classList.add("btn-success");
     defaultButton.classList.remove("btn-inactive");
 
-    const mainSection = document.getElementById('main-section');
-    mainSection.classList.add('hidden');
+    const mainSection = document.getElementById("main-section");
+    mainSection.classList.add("hidden");
 
-    document.getElementById('history-container').classList.remove("hidden");
-
+    document.getElementById("history-container").classList.remove("hidden");
   });
 document
   .getElementById("donation-button")
@@ -132,8 +135,8 @@ document
     defaultButton.classList.add("btn-inactive");
     defaultButton.classList.remove("btn-success");
 
-    const mainSection = document.getElementById('main-section');
-    mainSection.classList.remove('hidden');
+    const mainSection = document.getElementById("main-section");
+    mainSection.classList.remove("hidden");
 
-    document.getElementById('history-container').classList.add("hidden");
+    document.getElementById("history-container").classList.add("hidden");
   });
