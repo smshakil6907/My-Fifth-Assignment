@@ -6,6 +6,13 @@ document.getElementById("donate-button").addEventListener("click", function () {
   const inputBalance = parseFloat(
     document.getElementById("input-balance").value
   );
+  if(inputBalance <= 0 || isNaN(inputBalance)){
+    alert("Please enter a valid donation amount.");
+    return;
+}
+const modal = document.getElementById('my_modal_1');
+      modal.showModal();
+
   const pBalance = parseFloat(document.getElementById("p-balance").innerText);
   const addMoney = inputBalance + pBalance;
   document.getElementById("p-balance").innerText = addMoney;
@@ -14,11 +21,6 @@ document.getElementById("donate-button").addEventListener("click", function () {
   );
   const evenAmount = totalAmount - inputBalance;
   document.getElementById("total-amount").innerText = evenAmount;
-
-  if(inputBalance <= 0 || isNaN(inputBalance)){
-    alert("Please enter a valid donation amount.");
-    return;
-}
 
     // history section 
     const historyItem = document.createElement("div");
@@ -38,6 +40,14 @@ document
     const inputBalance = parseFloat(
       document.getElementById("input-balance2").value
     );
+    if(inputBalance <= 0 || isNaN(inputBalance)){
+      alert("Please enter a valid donation amount.");
+      return;
+  }
+
+  const modal = document.getElementById('my_modal_1');
+      modal.showModal();
+
     const pBalance = parseFloat(
       document.getElementById("p-balance2").innerText
     );
@@ -48,11 +58,6 @@ document
     );
     const evenAmount = totalAmount - inputBalance;
     document.getElementById("total-amount").innerText = evenAmount;
-
-    if(inputBalance <= 0 || isNaN(inputBalance)){
-      alert("Please enter a valid donation amount.");
-      return;
-  }
 
     // history section
     const historyItem = document.createElement("div");
@@ -71,6 +76,14 @@ document
     const inputBalance = parseFloat(
       document.getElementById("input-balance3").value
     );
+    if(inputBalance <= 0 || isNaN(inputBalance)){
+      alert("Please enter a valid donation amount.");
+      return;
+  }
+
+  const modal = document.getElementById('my_modal_1');
+      modal.showModal();
+
     const pBalance = parseFloat(
       document.getElementById("p-balance3").innerText
     );
@@ -81,11 +94,6 @@ document
     );
     const evenAmount = totalAmount - inputBalance;
     document.getElementById("total-amount").innerText = evenAmount;
-
-    if(inputBalance <= 0 || isNaN(inputBalance)){
-      alert("Please enter a valid donation amount.");
-      return;
-  }
 
     // history section
     const historyItem = document.createElement("div");
